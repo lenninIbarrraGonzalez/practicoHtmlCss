@@ -1,0 +1,16 @@
+{
+  "name": "practicohtmlcss",
+  "version": "1.0.0",
+  "description": "Curso practico de html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javaScript"
+  ],
+  "author": "Lennin Ibarra",
+  "license": "MIT"
+}
