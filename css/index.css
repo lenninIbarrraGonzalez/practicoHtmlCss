@@ -10,7 +10,7 @@ body {
   display: grid;
   width: 100vw;
   height: 100vh;
-  grid-template: 60px 1fr 60px 1fr 50px / 1fr;
+  grid-template: 60px 1fr 80px 1fr 50px / 1fr;
   grid-template-areas:
     "nav"
     "logo"
@@ -24,17 +24,31 @@ body {
   /* background-color: antiquewhite; */
   margin: 0;
   padding: 0;
+  height: 60px;
 }
 
 .menu-button {
   display: flex;
   justify-content: flex-end;
   padding-right: 30px;
+  height: auto;
+  width: auto;
+  /* background-color: greenyellow; */
 }
 
-.menu-button ul li {
+.menu-button ul {
+  height: auto;
+  width: auto;
+  /* background-color: green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-button li {
   display: inline;
-  padding: 10px;
+  margin-left: 10px;
+  /* background-color: azure; */
 }
 
 .menu-button a {
@@ -47,6 +61,14 @@ body {
   text-decoration: underline;
 }
 
+.menu-button .menu-icon {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+}
+
 .menu-button img {
   width: 30px;
   height: 30px;
@@ -54,7 +76,7 @@ body {
 }
 
 /* section logo  */
-.logo {
+.main-logo {
   /* background-color: beige; */
   grid-area: logo;
   height: auto;
@@ -62,7 +84,7 @@ body {
   padding: 0;
 }
 
-.logo-google {
+.main-logo-google {
   display: flex;
   /* margin-top: 60px; */
   justify-content: center;
@@ -70,7 +92,7 @@ body {
 }
 
 /* section search  */
-.search {
+.main-search {
   /* background-color: coral; */
   grid-area: search;
   display: flex;
@@ -78,21 +100,54 @@ body {
   align-items: center;
 }
 
-.form-search {
+.main-form-search {
   width: 500px;
   /* border: solid 1px red; */
+  border: 1px solid #dfe1e5;
+  border-radius: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.form-search input {
-  width: 100%;
-  height: 40px;
-  border: 1px solid gray;
-  border-radius: 20px;
-  padding-left: 30px;
+.main-form-search:hover {
+  box-shadow: 0 1px 6px 0 #20212447;
+  border-color: #dfe1e500;
+}
+
+.main-form-search input {
+  width: 380px;
+  height: 30px;
+  border: none;
+  /* padding-left: 30px; */
+  /* background: red; */
 }
 
 input:focus {
   outline: none;
+}
+
+main .main-search .search-icon {
+  /* background-color: red; */
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon.svg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+  margin-right: 20px;
+}
+
+main .main-search .micro-icon {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png");
+  background-repeat: none;
+  background-position: center;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+  margin-left: 20px;
+  cursor: pointer;
 }
 
 /* section button  */
@@ -102,12 +157,14 @@ input:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* background-color: red; */
 }
 
 .buttons div {
-  /* color: red; */
   padding: 10px;
-  margin: 10px;
+  /* margin: 10px; */
+  margin-top: 40px;
+  margin-left: 20px;
   cursor: pointer;
   background-color: #f2f2f2;
   border-color: #f2f2f2;
@@ -122,8 +179,9 @@ input:focus {
 }
 
 .buttons div:hover {
-  border: solid 1px #d2d4d8e1;
-  color: #414449;
+  border: solid 1px #c6c6c6;
+  color: #222;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0, 1);
 }
 
 .buttons-text {
@@ -132,7 +190,7 @@ input:focus {
   justify-content: center;
   align-items: center;
   color: #27282b;
-  font-size: 14px;
+  font-size: 0.9em;
 }
 
 .buttons-text a {
@@ -144,7 +202,8 @@ input:focus {
   grid-area: footer;
   background-color: #f2f2f2;
   color: #5f6368;
-  font-size: 0.8em;
+  font-size: 0.9em;
+  border-top: 1px solid rgba(0, 0, 0, 0.123);
 }
 
 .grid-container {
@@ -159,7 +218,7 @@ input:focus {
 
 .grid-container a {
   text-decoration: none;
-  color: #414449;
+  color: #414449cc;
 }
 
 .grid-left {
